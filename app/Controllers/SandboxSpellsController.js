@@ -13,9 +13,10 @@ function _drawSandBoxSpells(){
     }
   })
   document.getElementById('sandbox-spells').innerHTML = template
+  // NOTE could be moved to another function to draw spell count for for the sake of simplicity it's here.
   document.getElementById('spell-count').innerText = spellCount + '/10'
   document.getElementById('spell-count').classList.remove('text-danger')
-  if(spellCount > 10){
+  if(spellCount > 10){ // the if here is just to show them when they are over their spell limit (it's just hard coded to ten for now)
     document.getElementById('spell-count').classList.add('text-danger')
   }
 }
@@ -56,6 +57,7 @@ export class SandboxSpellsController{
     }
   }
 
+  // NOTE not async cause we are using data we already have
   setActiveSpell(id){
     sandboxSpellsService.setActiveSpell(id)
   }
@@ -70,6 +72,7 @@ export class SandboxSpellsController{
   }
 
 // NOTE this might be helpful friday
+// NOTE these are just draw functions
   seeDescription(){
     document.getElementById('spell-body').innerHTML = ProxyState.activeSpell.Description
   }

@@ -28,11 +28,13 @@ export class DndSpellsController{
     try {
       await dndSpellsService.getDndSpells()
     } catch (error) {
+      // NOTE console error AND pop notification should be in your catch, one tells the user something bad happened, the other logs the data in the console for use.
       console.error(error)
       Pop.toast(error.message, 'error')
     }
   }
 
+  // NOTE when getting all spells from the dnd api each spell only included the name and an index, we can use that index to get the whole spell object
   async getSpellDetails(index){
     try {
       await dndSpellsService.getSpellDetails(index)

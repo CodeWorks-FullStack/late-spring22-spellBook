@@ -25,7 +25,7 @@ export class Spell{
     return `<b class="selectable" onclick="app.dndSpellsController.getSpellDetails('${spell.index}')"> ${spell.name} </b>`
   }
 
-  // NOTE used to display the large view of the spell
+  // NOTE used to display the large view of the spell in the center
   // this.description in the center is the swappable view it starts with
   get DetailsTemplate(){
     return `
@@ -44,6 +44,7 @@ export class Spell{
     `
   }
 
+  // NOTE used for the list of my spells from the sandbox
   get SandBoxTemplate(){
     return `
     <div class="col-12">
@@ -60,15 +61,15 @@ export class Spell{
 
   // NOTE friday is right around the corner
 
-  // NOTE the description view calls to see the stats
+  // NOTE the description view has a button that calls to see the stats
   get Description(){
     return `
     <button  class=" p-2 btn btn-outline-danger" onclick="app.sandboxSpellsController.seeStats()"> see stats </button>
-    <p>${this.description}</p>
+    <p class="text-start">${this.description}</p>
     `
   }
 
-  // NOTE the stats view calls to see the description
+  // NOTE the stats view has a button that calls to see the description
   get Stats(){
     return`
     <button class=" p-2 btn btn-outline-danger" onclick="app.sandboxSpellsController.seeDescription()"> see description</button>
