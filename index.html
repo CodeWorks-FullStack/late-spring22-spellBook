@@ -8,26 +8,61 @@
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
-  <title>spellbook</title>
+  <title>Cleatavius The Spell Hoarder's spell pile</title>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
+    <nav class="navbar navbar-dark navbar-expand bg-black text-light no-select border-3 border-bottom border-danger">
       <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">spellbook</span>
+        <h1 class="text-danger">D</h1>
+        <span class="ms-2">Cleatavius The Spell Hoarder's spell pile</span>
       </a>
     </nav>
   </header>
   <main>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+    <div class="container-fluid  ">
+      <div class="row p-3">
+        <div class="col-md-3 bg-light elevation-2">
+          <div class="row" id="dnd-spells">
+
+          </div>
+        </div>
+        <div class="col-md-6 px-4">
+          <div class="row bg-light elevation-3" id="spell-details">
+            <!-- Spell details
+            <div class="col-12 text-center">
+              <h4>Spell Name</h4>
+            </div>
+            <div class="col-12 text-center">
+              <h6>Spell Level</h6>
+            </div>
+            <div class="col-12">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, corporis. Expedita error aliquid
+                vitae cumque sit repudiandae facere quaerat quibusdam quod, adipisci ad! Autem molestiae vel doloribus
+                non, molestias perspiciatis!</p>
+            </div> -->
+            <!--  -->
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="h5">Prepared: <span id="spell-count">0/10</span></div>
+          <div class=" row p-3 bg-light elevation-2" id="sandbox-spells">
+            <!-- sandbox spell -->
+            <!-- <div class="col-12">
+              <div class="row">
+                <div class="col-2">
+                  <input type="checkbox">
+                </div>
+                <div class="col selectable">spell name</div>
+                <div class="col-2 selectable text-danger"><i class="mdi mdi-close"></i></div>
+              </div>
+            </div> -->
+            <!--  -->
+          </div>
         </div>
       </div>
     </div>
@@ -38,6 +73,8 @@
     </div>
   </footer>
 
+  <!-- NOTE dont forget axios problems will occur -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
